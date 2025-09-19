@@ -121,11 +121,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1088570075901856729}
   - component: {fileID: 6427605341376705129}
+  - component: {fileID: 1878607347591054959}
   - component: {fileID: 2153755414570890117}
   - component: {fileID: 3525113057792696808}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,6 +168,21 @@ MonoBehaviour:
   crouchSpeed: 0.3
   crouchTransitionSpeed: 5
   myCamera: {fileID: 8005297996030979468}
+--- !u!114 &1878607347591054959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2239742584070925005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb71e09a0985bfc42984c76e82f398fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  sceneTransitionDelay: 2
+  roomADelay: 30
+  roomBDelay: 60
 --- !u!54 &2153755414570890117
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -373,6 +389,10 @@ PrefabInstance:
     - target: {fileID: 1788728812683655707, guid: 275bc3d5783a4524ba3455d91d800ee1, type: 3}
       propertyPath: m_Name
       value: Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788728812683655707, guid: 275bc3d5783a4524ba3455d91d800ee1, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3082729425968385888, guid: 275bc3d5783a4524ba3455d91d800ee1, type: 3}
       propertyPath: m_LocalScale.x

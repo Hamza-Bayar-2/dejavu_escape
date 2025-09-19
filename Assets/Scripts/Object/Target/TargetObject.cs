@@ -5,18 +5,11 @@ using UnityEngine.InputSystem;
 public class TargetObject : ObjectInteraction
 {
   [SerializeField] ParticleSystem targetFoundPS;
-  private bool isTargetFound = false;
+  public static bool isTargetFound = false;
   
   // Event that fires when target is found
   public static event Action OnTargetFound;
   
-  public bool IsTargetFound
-  {
-    get
-    {
-      return isTargetFound;
-    }
-  }
   public void OnAttack(InputValue value)
   {
     if (InsideRange && value.isPressed && !isTargetFound)
