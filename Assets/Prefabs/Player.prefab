@@ -163,6 +163,9 @@ MonoBehaviour:
   jumpStrength: 5
   jumbStartLimit: 0.01
   mouseSensitivity: 10
+  crouchHight: 0.5
+  crouchSpeed: 0.3
+  crouchTransitionSpeed: 5
   myCamera: {fileID: 8005297996030979468}
 --- !u!54 &2153755414570890117
 Rigidbody:
