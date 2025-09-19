@@ -3785,16 +3785,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3194412572108614134, guid: d841e69781d8ee04491079b34c5c42c5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9132820957903423428}
-    - targetCorrespondingSourceObject: {fileID: 3194412572108614134, guid: d841e69781d8ee04491079b34c5c42c5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9132820957903423429}
-    - targetCorrespondingSourceObject: {fileID: 3194412572108614134, guid: d841e69781d8ee04491079b34c5c42c5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9132820957903423430}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d841e69781d8ee04491079b34c5c42c5, type: 3}
 --- !u!4 &7103644152732990643 stripped
 Transform:
@@ -3806,83 +3797,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3604396630809638108, guid: d841e69781d8ee04491079b34c5c42c5, type: 3}
   m_PrefabInstance: {fileID: 6594813995200254597}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7977733128416454146 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3194412572108614134, guid: d841e69781d8ee04491079b34c5c42c5, type: 3}
-  m_PrefabInstance: {fileID: 6594813995200254597}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &9132820957903423428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7977733128416454146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!65 &9132820957903423429
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7977733128416454146}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.79448533, y: 4.9999723, z: 3.1418328}
-  m_Center: {x: -0.1027571, y: 0.9462147, z: 0.17762971}
---- !u!65 &9132820957903423430
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7977733128416454146}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3.6297808, y: 5.033414, z: 0.5939474}
-  m_Center: {x: 1.3148906, y: 0.9294939, z: 1.4515724}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
