@@ -1,26 +1,9 @@
 fileFormatVersion: 2
-guid: c51f8ebdf0f72e344a3a2f3dc362fdf9
-AssetOrigin:
-  serializedVersion: 1
-  productId: 295074
-  packageName: Bedroom / Interior - Low Poly assets
-  packageVersion: 1.1.5
-  assetPath: Assets/Fries and Seagull/Interior 01/Models/Pen Container.fbx
-  uploadId: 721210
+guid: 5f32cf5d5e7867d42b6f1589451e7fc1
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.053
-    second: {fileID: 2100000, guid: 1b5440f3d0b1a054f8ea27b9f8d01c56, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.054
-    second: {fileID: 2100000, guid: 9f815f6dbb5e59e4cab53c15a6cc7e38, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -96,7 +79,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []

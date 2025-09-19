@@ -1,11 +1,20 @@
 using UnityEngine;
 
-class ObjectInteraction : MonoBehaviour
+public class ObjectInteraction : MonoBehaviour
 {
+  [SerializeField] private float brightenAmount = 0.3f;
   private Material[] myMaterials;
   private Renderer[] myRenderers;
   private Color[] originalColors;
-  [SerializeField] private float brightenAmount = 0.3f; // Ne kadar beyazlaştırılacak (0-1 arası)
+  private bool insideRange = false;
+
+  public bool InsideRange
+  {
+    get
+    {
+      return insideRange;
+    }
+  }
 
   void Awake()
   {
@@ -46,11 +55,13 @@ class ObjectInteraction : MonoBehaviour
   void OnTriggerEnter(Collider other)
   {
     Glow(other);
+    insideRange = true;
   }
 
   void OnTriggerExit(Collider other)
   {
     StopGlow(other);
+    insideRange = false;
   }
 
   private void Glow(Collider other)
