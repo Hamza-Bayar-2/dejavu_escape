@@ -9,36 +9,48 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.34999996
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.32531
+      value: 7.523
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 4.56
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.02244
+      value: 8.066
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.5000001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.49999997
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.50000006
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.49999997
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -46,12 +58,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
       propertyPath: m_Name
       value: Suitcase
       objectReference: {fileID: 0}
+    - target: {fileID: 6071514194282933898, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c2df103755bd04bae294ec04ca7198, type: 2}
+    - target: {fileID: 6071514194282933898, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 21539b3de200d574bb94a6d347378f2f, type: 2}
+    - target: {fileID: 6071514194282933898, guid: 86eddd495f8cdbb4ba0a5c9869025ce2, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 21539b3de200d574bb94a6d347378f2f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -80,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cb6b4ee535b6c46ab8fc0b64dd347d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectInteraction
+  brightenAmount: 0.3
 --- !u!65 &-1315137318885935331
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -99,5 +128,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.2811708, y: 5.915155, z: 1.7547294}
+  m_Center: {x: -0.010621718, y: -0.50526077, z: 0.12200978}
