@@ -3,29 +3,35 @@ using UnityEngine;
 class ObjectInteraction : MonoBehaviour
 {
   private Material[] myMaterials;
-  private Renderer myRenderer;
+  private Renderer[] myRenderers;
   private Color[] originalColors;
   [SerializeField] private float brightenAmount = 0.3f; // Ne kadar beyazlaştırılacak (0-1 arası)
 
   void Awake()
   {
-    // First try to get renderer from this object
-    myRenderer = GetComponent<Renderer>();
+    // Get all renderers from this object and its children
+    myRenderers = GetComponentsInChildren<Renderer>();
 
-    // If not found, look in children
-    if (myRenderer == null)
+    // If no renderers found, log error
+    if (myRenderers.Length == 0)
     {
-      myRenderer = GetComponentInChildren<Renderer>();
-    }
-
-    // If still not found, log error
-    if (myRenderer == null)
-    {
-      Debug.LogError("No Renderer found on " + gameObject.name + " or its children!");
+      Debug.LogError("No Renderers found on " + gameObject.name + " or its children!");
       return;
     }
 
-    myMaterials = myRenderer.materials;
+    // Collect all materials from all renderers
+    System.Collections.Generic.List<Material> allMaterials = new System.Collections.Generic.List<Material>();
+
+    for (int r = 0; r < myRenderers.Length; r++)
+    {
+      Material[] rendererMaterials = myRenderers[r].materials;
+      for (int m = 0; m < rendererMaterials.Length; m++)
+      {
+        allMaterials.Add(rendererMaterials[m]);
+      }
+    }
+
+    myMaterials = allMaterials.ToArray();
     originalColors = new Color[myMaterials.Length];
 
     // Store original colors
@@ -34,7 +40,7 @@ class ObjectInteraction : MonoBehaviour
       originalColors[i] = myMaterials[i].color;
     }
 
-    Debug.Log("Found Renderer on: " + myRenderer.gameObject.name + " with " + myMaterials.Length + " materials");
+    Debug.Log("Found " + myRenderers.Length + " Renderers with total " + myMaterials.Length + " materials");
   }
 
   void OnTriggerEnter(Collider other)
