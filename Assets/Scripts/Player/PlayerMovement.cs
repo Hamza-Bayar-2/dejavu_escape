@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,18 +8,26 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpStrength = 5;
     [SerializeField] float jumbStartLimit = 0.01f;
     [SerializeField] float mouseSensitivity = 10f;
+    [SerializeField] float crouchHight = 0.5f;
+    [SerializeField] float crouchSpeed = 0.3f; // Movement speed multiplier when crouching
+    [SerializeField] float crouchTransitionSpeed = 5f; // How fast to crouch/stand
     [SerializeField] private Camera myCamera;
 
     private Rigidbody rb;
     private Vector2 movement;
     private Vector2 mouseInput;
     private float xRotation = 0f;
+    private Vector3 cameraStartPosition;
+    private Vector3 targetCameraPosition;
+    private bool isCrouching = false;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        cameraStartPosition = myCamera.transform.localPosition;
+        targetCameraPosition = cameraStartPosition;
     }
 
     void Start()
@@ -31,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         Move();
         RotateWithMouse();
         RotateCameraUpDown();
+        HandleCrouchTransition();
     }
 
     public void OnJump(InputValue value)
@@ -48,12 +58,20 @@ public class PlayerMovement : MonoBehaviour
         mouseInput = value.Get<Vector2>();
     }
 
+    public void OnCrouch(InputValue value)
+    {
+        Crouch(value);
+    }
+
     private void Move()
     {
         Vector3 moveDirection = new Vector3(movement.x, 0, movement.y);
         Vector3 worldMoveDirection = transform.TransformDirection(moveDirection);
 
-        transform.position += worldMoveDirection * moveSpeed * Time.deltaTime;
+        // Apply speed multiplier when crouching
+        float currentSpeed = isCrouching ? moveSpeed * crouchSpeed : moveSpeed;
+
+        transform.position += worldMoveDirection * currentSpeed * Time.deltaTime;
     }
 
     private void RotateWithMouse()
@@ -79,6 +97,34 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
         }
+    }
+
+    private void Crouch(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            isCrouching = true;
+            targetCameraPosition = new Vector3(cameraStartPosition.x,
+                                             cameraStartPosition.y - crouchHight,
+                                             cameraStartPosition.z);
+            Debug.Log("Player crouching");
+        }
+        else
+        {
+            isCrouching = false;
+            targetCameraPosition = cameraStartPosition;
+            Debug.Log("Player standing up");
+        }
+    }
+
+    private void HandleCrouchTransition()
+    {
+        // Smoothly lerp camera position to target
+        myCamera.transform.localPosition = Vector3.Lerp(
+            myCamera.transform.localPosition,
+            targetCameraPosition,
+            crouchTransitionSpeed * Time.deltaTime
+        );
     }
 }
 
