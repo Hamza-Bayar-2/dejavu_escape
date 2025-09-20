@@ -2077,25 +2077,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 669043936}
     - target: {fileID: 1878607347591054959, guid: a36889a6f72dee8468270fce0bef5a77, type: 3}
-      propertyPath: pressEText
-      value: 
-      objectReference: {fileID: 669043934}
-    - target: {fileID: 1878607347591054959, guid: a36889a6f72dee8468270fce0bef5a77, type: 3}
-      propertyPath: roomADelay
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1878607347591054959, guid: a36889a6f72dee8468270fce0bef5a77, type: 3}
-      propertyPath: roomBDelay
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1878607347591054959, guid: a36889a6f72dee8468270fce0bef5a77, type: 3}
       propertyPath: subtitleText
       value: 
       objectReference: {fileID: 669043935}
-    - target: {fileID: 1878607347591054959, guid: a36889a6f72dee8468270fce0bef5a77, type: 3}
-      propertyPath: sceneTransitionDelay
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 2239742584070925005, guid: a36889a6f72dee8468270fce0bef5a77, type: 3}
       propertyPath: m_Name
       value: Player
