@@ -54,6 +54,7 @@ public class GamePageManager : MonoBehaviour
     if (!isGamePuased)
     {
       Time.timeScale = 0f; // Pause the game
+      Cursor.lockState = CursorLockMode.None;
       Cursor.visible = true;
 
       // Find pause popup if not already found
@@ -71,6 +72,7 @@ public class GamePageManager : MonoBehaviour
     else
     {
       Time.timeScale = 1f; // Resume the game
+      Cursor.lockState = CursorLockMode.Locked;
       Cursor.visible = false;
 
       // Hide pause popup
