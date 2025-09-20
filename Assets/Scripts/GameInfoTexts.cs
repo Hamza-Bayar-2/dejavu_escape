@@ -5,7 +5,7 @@ public static class GameInfoTexts
   public static string RoomA = "Observation";
   public static string RoomB = "Search";
   public static string wasdMovement = "WASD for moving";
-  public static string clickTarget = "Left click if you find the Target";
+  public static string clickTarget = "Left click if you find the Object";
 
   public static string Level = "Level: 1";
   public static string Time = "Time: 00:00";

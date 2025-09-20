@@ -905,10 +905,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7653469649563529239, guid: f0d381fee360b124789b36cbf2b8445c, type: 3}
-      propertyPath: m_text
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8376928239622759617, guid: f0d381fee360b124789b36cbf2b8445c, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -2086,11 +2082,11 @@ PrefabInstance:
       objectReference: {fileID: 669043934}
     - target: {fileID: 1878607347591054959, guid: a36889a6f72dee8468270fce0bef5a77, type: 3}
       propertyPath: roomADelay
-      value: 40
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1878607347591054959, guid: a36889a6f72dee8468270fce0bef5a77, type: 3}
       propertyPath: roomBDelay
-      value: 60
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1878607347591054959, guid: a36889a6f72dee8468270fce0bef5a77, type: 3}
       propertyPath: subtitleText

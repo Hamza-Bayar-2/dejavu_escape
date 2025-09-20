@@ -101,6 +101,14 @@ public class LevelManager : MonoBehaviour
       Debug.Log("Room B timeout coroutine cancelled - target found!");
     }
 
+    // Cancel the Room A timeout coroutine if it's running
+    if (roomATimeoutCoroutine != null)
+    {
+      StopCoroutine(roomATimeoutCoroutine);
+      roomATimeoutCoroutine = null;
+      Debug.Log("Room A timeout coroutine cancelled - target found!");
+    }
+
     // Cancel the timer countdown coroutine if it's running
     if (timerCountdownCoroutine != null)
     {
@@ -121,6 +129,13 @@ public class LevelManager : MonoBehaviour
 
   private IEnumerator LoadNextSceneWithDelayAndTimer(float timeDelay)
   {
+    // Cancel any existing timer countdown coroutine before starting new one
+    if (timerCountdownCoroutine != null)
+    {
+      StopCoroutine(timerCountdownCoroutine);
+      timerCountdownCoroutine = null;
+    }
+
     // Use the shared timer update method
     timerCountdownCoroutine = StartCoroutine(UpdateTimerCountdown(timeDelay));
     yield return timerCountdownCoroutine;
@@ -142,21 +157,11 @@ public class LevelManager : MonoBehaviour
   // If you can not find the object in room B reload room A
   private IEnumerator LoadRoomAOnTimeout(float timeDelay)
   {
-
-    // Cancel the Room B timeout coroutine if it's running
-    if (roomBTimeoutCoroutine != null)
-    {
-      StopCoroutine(roomBTimeoutCoroutine);
-      roomBTimeoutCoroutine = null;
-      Debug.Log("Room B timeout coroutine cancelled - target found!");
-    }
-
-    // Cancel the timer countdown coroutine if it's running
+    // Cancel any existing timer countdown coroutine before starting new one
     if (timerCountdownCoroutine != null)
     {
       StopCoroutine(timerCountdownCoroutine);
       timerCountdownCoroutine = null;
-      Debug.Log("Timer countdown coroutine cancelled - target found!");
     }
 
     // Use the shared timer update method
@@ -176,8 +181,9 @@ public class LevelManager : MonoBehaviour
     roomBTimeoutCoroutine = null;
     timerCountdownCoroutine = null;
 
-    // Wait a moment before loading
-    yield return new WaitForSeconds(sceneTransitionDelay);
+    // Show scene transition countdown
+    timerCountdownCoroutine = StartCoroutine(UpdateTimerCountdown(sceneTransitionDelay));
+    yield return timerCountdownCoroutine;
 
     SceneManager.LoadScene(roomASceneName);
   }
@@ -185,20 +191,11 @@ public class LevelManager : MonoBehaviour
   // After examining the room A go to the room B
   private IEnumerator LoadRoomBOnTimeout(float timeDelay)
   {
-    // Cancel the Room A timeout coroutine if it's running
-    if (roomATimeoutCoroutine != null)
-    {
-      StopCoroutine(roomATimeoutCoroutine);
-      roomATimeoutCoroutine = null;
-      Debug.Log("Room A timeout coroutine cancelled - target found!");
-    }
-
-    // Cancel the timer countdown coroutine if it's running
+    // Cancel any existing timer countdown coroutine before starting new one
     if (timerCountdownCoroutine != null)
     {
       StopCoroutine(timerCountdownCoroutine);
       timerCountdownCoroutine = null;
-      Debug.Log("Timer countdown coroutine cancelled - target found!");
     }
 
     // Use the shared timer update method
@@ -218,8 +215,9 @@ public class LevelManager : MonoBehaviour
     roomATimeoutCoroutine = null;
     timerCountdownCoroutine = null;
 
-    // Wait a moment before loading
-    yield return new WaitForSeconds(sceneTransitionDelay);
+    // Show scene transition countdown
+    timerCountdownCoroutine = StartCoroutine(UpdateTimerCountdown(sceneTransitionDelay));
+    yield return timerCountdownCoroutine;
 
     SceneManager.LoadScene(roomBSceneName);
   }
