@@ -271,8 +271,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   sceneTransitionDelay: 5
-  roomADelay: 20
-  roomBDelay: 20
+  roomADelay: 60
+  roomBDelay: 60
   levelText: {fileID: 0}
   timerText: {fileID: 0}
   subtitleText: {fileID: 0}

@@ -58,4 +58,14 @@ public class Door : ObjectInteraction
       }
     }
   }
+
+  public void SetTargetToVisible()
+  {
+    TargetObject.SetTargetVisibility(true);
+  }
+
+  public void SetTargetToNotVisible()
+  {
+    TargetObject.SetTargetVisibility(false);
+  }
 }
