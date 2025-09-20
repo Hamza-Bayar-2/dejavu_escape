@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 1088570075901856729}
   - component: {fileID: 6427605341376705129}
   - component: {fileID: 1878607347591054959}
+  - component: {fileID: 611449417653368193}
   - component: {fileID: 2153755414570890117}
   - component: {fileID: 3525113057792696808}
   m_Layer: 0
@@ -183,6 +184,22 @@ MonoBehaviour:
   sceneTransitionDelay: 2
   roomADelay: 30
   roomBDelay: 60
+  levelText: {fileID: 0}
+  timerText: {fileID: 0}
+  subtitleText: {fileID: 0}
+--- !u!114 &611449417653368193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2239742584070925005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb060447bdf4ec49b35bb03c5c17be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
+  pressEText: {fileID: 0}
 --- !u!54 &2153755414570890117
 Rigidbody:
   m_ObjectHideFlags: 0
