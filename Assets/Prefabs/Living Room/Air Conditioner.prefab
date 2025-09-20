@@ -9,32 +9,44 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b24fc62430861744ea4d4329011d083d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b24fc62430861744ea4d4329011d083d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b24fc62430861744ea4d4329011d083d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b24fc62430861744ea4d4329011d083d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.32531
+      value: 7.64
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b24fc62430861744ea4d4329011d083d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 4.5499997
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b24fc62430861744ea4d4329011d083d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.02244
+      value: 8.78
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b24fc62430861744ea4d4329011d083d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.70710653
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b24fc62430861744ea4d4329011d083d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b24fc62430861744ea4d4329011d083d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.70710707
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b24fc62430861744ea4d4329011d083d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b24fc62430861744ea4d4329011d083d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -42,11 +54,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b24fc62430861744ea4d4329011d083d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b24fc62430861744ea4d4329011d083d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b24fc62430861744ea4d4329011d083d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3164483963743589445, guid: b24fc62430861744ea4d4329011d083d, type: 3}
       propertyPath: m_LocalScale.x
@@ -160,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cb6b4ee535b6c46ab8fc0b64dd347d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectInteraction
+  brightenAmount: 0.3
 --- !u!65 &8480701246513767571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -179,5 +196,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.3297, y: 1.7337464, z: 3.1417563}
+  m_Center: {x: 0.1648501, y: 0.029354915, z: -0.03227368}
