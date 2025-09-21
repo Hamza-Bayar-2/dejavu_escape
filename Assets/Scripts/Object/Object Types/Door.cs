@@ -3,6 +3,9 @@ using UnityEngine.InputSystem;
 
 public class Door : ObjectInteraction
 {
+  [SerializeField] AudioSource doorAudio;
+  [SerializeField] AudioClip openSound;
+  [SerializeField] AudioClip closeSound;
   private Animator DoorAnimator;
   private bool isOpen;
 
@@ -57,6 +60,17 @@ public class Door : ObjectInteraction
         DoorAnimator.SetBool("Is Door Open", false);
       }
     }
+  }
+
+  public void PlayOpenSound()
+  {
+    doorAudio.PlayOneShot(openSound);
+
+  }
+
+  public void PlayCloseSound()
+  {
+    doorAudio.PlayOneShot(closeSound);
   }
 
   public void SetTargetToVisible()
