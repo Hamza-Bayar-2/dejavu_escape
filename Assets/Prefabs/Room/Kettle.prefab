@@ -10,43 +10,43 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9a599bd2e41f4d24586f02b75f611418, type: 3}
       propertyPath: m_LocalScale.x
-      value: 35
+      value: 0.21569574
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a599bd2e41f4d24586f02b75f611418, type: 3}
       propertyPath: m_LocalScale.y
-      value: 35
+      value: 0.5122349
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a599bd2e41f4d24586f02b75f611418, type: 3}
       propertyPath: m_LocalScale.z
-      value: 35
+      value: 0.14638275
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a599bd2e41f4d24586f02b75f611418, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.32531
+      value: 0.0027079803
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a599bd2e41f4d24586f02b75f611418, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: -0.006158625
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a599bd2e41f4d24586f02b75f611418, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.02244
+      value: 0.008442648
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a599bd2e41f4d24586f02b75f611418, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 0.70710635
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a599bd2e41f4d24586f02b75f611418, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.000000029802322
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a599bd2e41f4d24586f02b75f611418, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.000000059604645
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a599bd2e41f4d24586f02b75f611418, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.7071072
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a599bd2e41f4d24586f02b75f611418, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cb6b4ee535b6c46ab8fc0b64dd347d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectInteraction
+  brightenAmount: 0.3
 --- !u!65 &-554773840084762658
 BoxCollider:
   m_ObjectHideFlags: 0
