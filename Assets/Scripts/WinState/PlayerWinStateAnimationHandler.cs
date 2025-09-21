@@ -9,6 +9,10 @@ public class PlayerWinStateAnimationHandler : MonoBehaviour
   void Awake()
   {
     playerAnimator = GetComponent<Animator>();
+    if (GamePageManager.Instance != null)
+    {
+      GamePageManager.Instance.backgroundAudio.Stop();
+    }
   }
 
   public void DisableAnimator()

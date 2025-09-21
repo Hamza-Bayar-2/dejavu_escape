@@ -4,12 +4,18 @@ using UnityEngine.InputSystem;
 
 public class GamePageManager : MonoBehaviour
 {
+  [SerializeField] public AudioSource backgroundAudio;
+
   public static GamePageManager Instance { get; private set; }
 
   private GameObject pausePopup;
 
   void Awake()
   {
+    if (!backgroundAudio.isPlaying)
+    {
+      backgroundAudio.Play();
+    }
     // Singleton pattern implementation
     if (Instance == null)
     {

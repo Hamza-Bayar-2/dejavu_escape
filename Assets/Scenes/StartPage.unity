@@ -272,6 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ba7ccf76578c543a61fcf8fb831ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GamePageManager
+  backgroundAudio: {fileID: 464086185}
 --- !u!114 &464086182
 MonoBehaviour:
   m_ObjectHideFlags: 0
