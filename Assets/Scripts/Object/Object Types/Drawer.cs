@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Drawer : ObjectInteraction
 {
+  [SerializeField] AudioSource drawerAudio;
   private Animator drawerAnimator;
   private bool isOpen;
 
@@ -57,5 +58,10 @@ public class Drawer : ObjectInteraction
         drawerAnimator.SetBool("Is Drawer Open", false);
       }
     }
+  }
+
+  public void PlayDrawerSound()
+  {
+    drawerAudio.Play();
   }
 }
