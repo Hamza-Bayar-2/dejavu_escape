@@ -7506,6 +7506,8 @@ MonoBehaviour:
   crouchSpeed: 0.3
   crouchTransitionSpeed: 5
   myCamera: {fileID: 8005297997303504774}
+  walkingAudio: {fileID: 0}
+  jumpAudio: {fileID: 0}
 --- !u!95 &6427605340649422948
 Animator:
   serializedVersion: 7
