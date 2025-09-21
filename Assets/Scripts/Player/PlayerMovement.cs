@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float crouchSpeed = 0.3f; // Movement speed multiplier when crouching
     [SerializeField] float crouchTransitionSpeed = 5f; // How fast to crouch/stand
     [SerializeField] private Camera myCamera;
+    [SerializeField] private AudioSource walkingAudio;
+    [SerializeField] private AudioSource jumpAudio;
 
     private Rigidbody rb;
     private Vector2 movement;
@@ -20,6 +22,13 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 cameraStartPosition;
     private Vector3 targetCameraPosition;
     private bool isCrouching = false;
+    private bool IsGrounded
+    {
+        get
+        {
+            return Mathf.Abs(rb.linearVelocity.y) < jumbStartLimit;
+        }
+    }
 
     void Awake()
     {
@@ -67,6 +76,9 @@ public class PlayerMovement : MonoBehaviour
         float currentSpeed = isCrouching ? moveSpeed * crouchSpeed : moveSpeed;
 
         transform.position += worldMoveDirection * currentSpeed * Time.deltaTime;
+
+        // Handle walking audio
+        HandleWalkingAudio(moveDirection);
     }
 
     private void RotateWithMouse()
@@ -88,9 +100,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump(InputValue value)
     {
-        if (value.isPressed && Mathf.Abs(rb.linearVelocity.y) < jumbStartLimit)
+        if (value.isPressed && IsGrounded)
         {
             rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+
+            // Play jump audio
+            if (jumpAudio != null)
+            {
+                jumpAudio.Play();
+            }
         }
     }
 
@@ -120,6 +138,43 @@ public class PlayerMovement : MonoBehaviour
             targetCameraPosition,
             crouchTransitionSpeed * Time.deltaTime
         );
+    }
+
+    private void HandleWalkingAudio(Vector3 moveDirection)
+    {
+        if (walkingAudio == null) return;
+
+        // Check if player is moving
+        bool isMoving = moveDirection.magnitude > 0.1f;
+
+        if (isMoving && IsGrounded)
+        {
+            // Start playing walking audio if not already playing
+            if (!walkingAudio.isPlaying)
+            {
+                walkingAudio.Play();
+            }
+
+            // Adjust pitch based on crouching state
+            if (isCrouching)
+            {
+                walkingAudio.pitch = 0.7f; // Slower pitch when crouching
+                walkingAudio.volume = 0.5f; // Quieter when crouching
+            }
+            else
+            {
+                walkingAudio.pitch = 1f; // Normal pitch when standing
+                walkingAudio.volume = 1f; // Normal volume when standing
+            }
+        }
+        else
+        {
+            // Stop walking audio when not moving
+            if (walkingAudio.isPlaying)
+            {
+                walkingAudio.Stop();
+            }
+        }
     }
 }
 
