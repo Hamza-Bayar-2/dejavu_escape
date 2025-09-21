@@ -5,7 +5,7 @@ public static class GameInfoTexts
   public static string RoomA = "Observation";
   public static string RoomB = "Search";
   public static string wasdMovement = "WASD for moving";
-  public static string clickTarget = "Left click if you find the Object";
+  public static string clickTarget = "Enter the room and left click if you find the Object";
 
   public static string Level = "Level: 1";
   public static string Time = "Time: 00:00";
@@ -15,7 +15,7 @@ public static class GameInfoTexts
   public static string Instructions = "Use WASD to move";
 
   // Room A (Gözlem Odası) Texts
-  public static string RoomASubtitle = "You have limited time for checking the room, be quick!";
+  public static string RoomASubtitle = "You have limited time for observing the room";
 
   // Room B (Etkileşim Odası) Texts  
   public static string RoomBSubtitle = "Find the similar object, quick!";
