@@ -60,7 +60,7 @@ public class Drawer : ObjectInteraction
     }
   }
 
-  public void PlayDrawerSound()
+  public void PlaySound()
   {
     drawerAudio.Play();
   }

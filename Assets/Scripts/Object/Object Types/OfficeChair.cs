@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class OfficeCair : ObjectInteraction
 {
+  [SerializeField] AudioSource spinAudio;
   private Animator OfficeCairAnimator;
   private bool isOpen;
 
@@ -57,5 +58,10 @@ public class OfficeCair : ObjectInteraction
         OfficeCairAnimator.SetBool("Should Spin", false);
       }
     }
+  }
+
+  public void PlaySound()
+  {
+    spinAudio.Play();
   }
 }
