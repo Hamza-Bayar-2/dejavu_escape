@@ -17,6 +17,7 @@ public class LevelManager : MonoBehaviour
 
   [Header("Audio Sources")]
   [SerializeField] private AudioSource gameLoseAudio;
+  [SerializeField] private AudioSource timeUpAudio;
 
   // Coroutine reference to cancel if target is found
   private Coroutine roomBTimeoutCoroutine;
@@ -211,6 +212,12 @@ public class LevelManager : MonoBehaviour
     timerCountdownCoroutine = StartCoroutine(UpdateTimerCountdown(timeDelay));
     yield return timerCountdownCoroutine;
 
+    // Play time up audio
+    if (timeUpAudio != null)
+    {
+      timeUpAudio.Play();
+    }
+
     // Time's up in Room A - go to Room B of the same level
     string currentSceneName = SceneManager.GetActiveScene().name;
 
@@ -237,7 +244,7 @@ public class LevelManager : MonoBehaviour
     float remainingTime = timeDelay;
 
     // Update timer every second
-    while (remainingTime > 0)
+    while (remainingTime >= 0)
     {
       // Update timer text
       if (timerText != null)
