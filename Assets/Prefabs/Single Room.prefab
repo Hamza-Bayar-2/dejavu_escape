@@ -1228,7 +1228,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7441207812998656522, guid: 9f92ca7eec64f934389c8ae3c0dfa74c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1253,8 +1254,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc706b122f60953428b6a4d1c012b648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IsRoomEntered
+  roomEnteredAudio: {fileID: 6919657808406554212}
 --- !u!4 &4627439252077345382 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9203844896395360215, guid: 9f92ca7eec64f934389c8ae3c0dfa74c, type: 3}
+  m_PrefabInstance: {fileID: 4579412400816197041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &6919657808406554212 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6884534116935510997, guid: 9f92ca7eec64f934389c8ae3c0dfa74c, type: 3}
   m_PrefabInstance: {fileID: 4579412400816197041}
   m_PrefabAsset: {fileID: 0}

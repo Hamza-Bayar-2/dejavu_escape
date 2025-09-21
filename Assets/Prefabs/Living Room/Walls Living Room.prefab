@@ -84,6 +84,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walls Living Room
       objectReference: {fileID: 0}
+    - target: {fileID: 6919657808406554212, guid: 20fb6e9933a326549a459f953ea13cfc, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a530f8459c8e0de44b8ad1ee9703da18, type: 3}
+    - target: {fileID: 6919657808406554212, guid: 20fb6e9933a326549a459f953ea13cfc, type: 3}
+      propertyPath: MaxDistance
+      value: 497.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598840117176741893, guid: 20fb6e9933a326549a459f953ea13cfc, type: 3}
+      propertyPath: roomEnteredClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a530f8459c8e0de44b8ad1ee9703da18, type: 3}
     - target: {fileID: 8803115421751115438, guid: 20fb6e9933a326549a459f953ea13cfc, type: 3}
       propertyPath: m_LocalScale.x
       value: 25.450663

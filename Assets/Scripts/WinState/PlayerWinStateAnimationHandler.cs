@@ -15,6 +15,11 @@ public class PlayerWinStateAnimationHandler : MonoBehaviour
     }
   }
 
+  void OnDestroy()
+  {
+    GamePageManager.Instance.backgroundAudio.Play();
+  }
+
   public void DisableAnimator()
   {
     playerAnimator.enabled = false;

@@ -3,7 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class IsRoomEntered : MonoBehaviour
 {
+  [SerializeField] private AudioSource roomEnteredAudio;
   private LevelManager levelManager;
+  private bool isRoomEntered = false;
 
   void Start()
   {
@@ -19,8 +21,14 @@ public class IsRoomEntered : MonoBehaviour
   void OnTriggerEnter(Collider other)
   {
     // Eğer çarpan obje Player tag'ına sahipse
-    if (other.CompareTag("Player") && levelManager != null)
+    if (other.CompareTag("Player") && levelManager != null && !isRoomEntered)
     {
+      isRoomEntered = true;
+      // Play room entered sound
+      if (roomEnteredAudio != null)
+      {
+        roomEnteredAudio.Play();
+      }
       Debug.Log("Player entered the room!");
       if (SceneManager.GetActiveScene().name.Contains("Level1B"))
       {
@@ -43,9 +51,6 @@ public class IsRoomEntered : MonoBehaviour
       {
         Debug.LogWarning("Scene name doesn't end with A or B: " + currentSceneName);
       }
-
-      // Script'i deaktif et ki bir daha çalışmasın
-      this.gameObject.SetActive(false);
     }
   }
 }

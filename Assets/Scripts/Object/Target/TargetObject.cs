@@ -28,6 +28,11 @@ public class TargetObject : ObjectInteraction
     }
   }
 
+  void OnDestroy()
+  {
+    isTargetFound = false;
+  }
+
   private void PlaySound()
   {
     // Play target found sound
