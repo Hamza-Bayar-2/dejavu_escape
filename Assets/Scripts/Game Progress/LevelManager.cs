@@ -15,6 +15,9 @@ public class LevelManager : MonoBehaviour
   [SerializeField] TextMeshProUGUI timerText;      // Zamanlayıcı
   [SerializeField] TextMeshProUGUI subtitleText;   // Altyazı
 
+  [Header("Audio Sources")]
+  [SerializeField] private AudioSource gameLoseAudio;
+
   // Coroutine reference to cancel if target is found
   private Coroutine roomBTimeoutCoroutine;
   private Coroutine roomATimeoutCoroutine;
@@ -167,6 +170,12 @@ public class LevelManager : MonoBehaviour
     // Use the shared timer update method
     timerCountdownCoroutine = StartCoroutine(UpdateTimerCountdown(timeDelay));
     yield return timerCountdownCoroutine;
+
+    // Play game lose sound
+    if (gameLoseAudio != null)
+    {
+      gameLoseAudio.Play();
+    }
 
     // Time's up in Room B - go back to Room A of the same level
     string currentSceneName = SceneManager.GetActiveScene().name;
