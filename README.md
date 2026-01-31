@@ -39,5 +39,5 @@ Bu sürümde sadece Level 1 mevcuttur.
 </p>
 
 ## İndirme / Oynama
--  Google Drive: https://drive.google.com/file/d/1IHwOMOJqVoUEI3L9hOqocdxF9y7Bx8Db/view?usp=sharing
+-  Google Drive: [indir](https://drive.google.com/file/d/1IHwOMOJqVoUEI3L9hOqocdxF9y7Bx8Db/view?usp=sharing)
 
