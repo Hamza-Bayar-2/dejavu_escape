@@ -33,8 +33,8 @@ Bu sürümde sadece Level 1 mevcuttur.
 	<img src="Assets/Readme Assets/game_screenshot_2.jpg" alt="Dejavu Escape Screenshot 2" width="45%" />
 </p>
 <p align="center">
-	<img src="Assets/Readme Assets/game_screenshot_5.jpg" alt="Dejavu Escape Screenshot 3" width="45%" />
-	<img src="Assets/Readme Assets/game_screenshot_6.jpg" alt="Dejavu Escape Screenshot 4" width="45%" />
+	<img src="Assets/Readme Assets/game_screenshot_5.jpg" alt="Dejavu Escape Screenshot 5" width="45%" />
+	<img src="Assets/Readme Assets/game_screenshot_6.jpg" alt="Dejavu Escape Screenshot 6" width="45%" />
 </p>
 
 ## İndirme / Oynama
