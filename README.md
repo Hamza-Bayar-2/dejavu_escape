@@ -25,7 +25,7 @@ Kısa ve merak uyandıran bir kaçış/puzzle deneyimi. Sarı ışıklı ilk oda
 Bu sürümde sadece Level 1 mevcuttur.
 
 ## Tanıtım Videosu
-[![Dejavu Escape Tanıtım Videosu](https://img.youtube.com/vi/8TK6iZOSn1o/0.jpg)](https://www.youtube.com/watch?v=8TK6iZOSn1o)
+[![Dejavu Escape Tanıtım Videosu](https://img.youtube.com/vi/8TK6iZOSn1o/0.jpg)]([https://www.youtube.com/watch?v=8TK6iZOSn1o](https://youtu.be/5w-8k7wnMSI))
 
 ## Görseller
 <p align="center">
